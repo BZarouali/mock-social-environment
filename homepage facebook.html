@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Facebook Timeline Mock</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      padding: 1rem;
+      background: #fff;
+      height: 100vh;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .sidebar h3 {
+      font-size: 14px;
+      margin-top: 2rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .main {
+      flex: 1;
+      padding: 1rem;
+    }
+    .status-bar {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .status-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+    }
+    .stories {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    .story {
+      width: 80px;
+      height: 130px;
+      background: #ccc;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      text-align: center;
+    }
+    .post {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .post .actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .rightbar {
+      width: 240px;
+      padding: 1rem;
+      font-size: 14px;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .contact img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+    .contact span {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+<header style="position: fixed; top: 0; left: 0; right: 0; height: 56px; background-color: #ffffff; border-bottom: 1px solid #ddd; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; z-index: 1000;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<i class="fa-brands fa-facebook" style="color: #1877f2; font-size: 28px;"></i>
+<input placeholder="Zoeken op Facebook" style="padding: 6px 12px; border: 1px solid #ccc; border-radius: 20px; background-color: #f0f2f5;" type="text"/>
+</div>
+<div style="display: flex; align-items: center; gap: 60px; font-size: 18px; color: #606770; margin-left: -102px;">
+<i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-tv"></i>
+<i class="fa-solid fa-store"></i>
+<i class="fa-solid fa-users"></i>
+<i class="fa-solid fa-gamepad"></i>
+</div>
+<div style="display: flex; align-items: center; gap: 32px; font-size: 18px; color: #606770;">
+<i class="fa-solid fa-plus-circle"></i>
+<i class="fa-solid fa-comment-dots"></i>
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-circle-user"></i>
+</div>
+</header>
+<div class="sidebar" style=" margin-top: 70px;">
+<strong>Alex Vermeer</strong>
+<ul>
+<li><i class="fa-solid fa-user-group"></i> Friends</li>
+<li><i class="fa-solid fa-clock-rotate-left"></i> Memories</li>
+<li><i class="fa-solid fa-bookmark"></i> Saved</li>
+<li><i class="fa-solid fa-users"></i> Groups</li>
+<li><i class="fa-solid fa-play"></i> Video</li>
+<li><i class="fa-solid fa-store"></i> Marketplace</li>
+<li><i class="fa-solid fa-newspaper"></i> Feeds</li>
+</ul>
+<h3>Your shortcuts</h3>
+<ul><li>Lingua - Language Learning</li><li>KU Leuven CW</li><li>Rock Werchter</li><li>Angry Birds Friends</li></ul>
+</div>
+<div class="main" style="margin-top: 70px; max-width: 600px; margin-left: auto; margin-right: auto;; margin-top: 70px; max-width: 600px; margin-left: auto; margin-right: auto;">
+<div class="status-bar">
+<input placeholder="What's on your mind, Brahim?" style="width: calc(100% - 20px); padding: 10px; font-size: 0.9rem; border-radius: 20px; border: 1px solid #ddd; box-sizing: border-box; background: #f0f2f5;" type="text"/>
+</div>
+<div class="stories" style="display: flex; gap: 10px; overflow-x: auto; margin: 0 auto 1rem auto; width: fit-content; max-width: 100%;">
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1005/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Create story</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1011/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Nas Daily</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1021/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Nieuwsblad</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1033/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Matthias</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1052/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Sporza</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://picsum.photos/id/1067/80/130'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8);">Foudil</div>
+</div>
+<div class="post">
+<strong>Robin De Wilde</strong> · 13m<br/>
+<p>Nee hoor, het staat wel degelijk mee op de foto. <span style="color: #385898;">#fakenews</span></p>
+<img alt="Mock Post Image" src="https://picsum.photos/id/1011/600/300"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+      </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+      </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+      </span>
+</div>
+</div>
+<div class="post">
+<strong>Sporza</strong> · 1h<br/>
+<p>Wout van Aert keert terug in competitie: "De vorm zit goed, maar ik bekijk het dag per dag" 🚴‍♂️🇧🇪</p>
+<img alt="Sporza Post Image" src="https://picsum.photos/id/1035/600/300"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+        </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+        </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+        </span>
+</div>
+</div>
+<div class="post">
+<strong>Nathan Peeters</strong> · 2h<br/>
+<p>Loving this new cozy corner I set up at home 🛋️🌿</p>
+<img alt="Post Image 3" src="https://picsum.photos/id/1066/600/300"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+    </span>
+</div>
+</div>
+<div class="post">
+<strong>Leila Saidi</strong> · 3h<br/>
+<p>Throwback to last summer in the south of France ☀️🇫🇷</p>
+<img alt="Post Image 4" src="https://picsum.photos/id/1043/600/300"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+    </span>
+</div>
+</div>
+</div>
+<div class="rightbar" style=" margin-top: 70px;">
+<strong style="display: block; margin-bottom: 16px;">Contacts</strong>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/1.jpg"/><span>Sofie Janssens</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/2.jpg"/><span>Lies De Vos</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/3.jpg"/><span>Annelies Maes</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/4.jpg"/><span>Jana Willems</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/men/1.jpg"/><span>Thomas Bekaert</span></div>
+</div>
+</body>
+</html>
