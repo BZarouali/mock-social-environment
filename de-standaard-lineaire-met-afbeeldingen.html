@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>De Standaard – Meest recent</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #000;
+        }
+        .top-header {
+            background-color: #f5f5f5;
+            font-size: 13px;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .top-header-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-header-right {
+            display: flex;
+            gap: 20px;
+        }
+        .menu-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-color: #000;
+            mask: url('data:image/svg+xml;utf8,<svg fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z\"/></svg>') no-repeat center;
+            -webkit-mask: url('data:image/svg+xml;utf8,<svg fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z\"/></svg>') no-repeat center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            gap: 12px;
+        }
+        header img {
+            height: 32px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            gap: 20px;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .article {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            gap: 20px;
+        }
+        .article img {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .article-content {
+            flex: 1;
+        }
+        .article h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .article time {
+            color: grey;
+            font-size: 13px;
+        }
+        h2.section-title {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="top-header-left">
+            <span class="menu-icon"></span>
+            <span>Menu</span>
+        </div>
+        <div class="top-header-right">
+            <div>DS Voordeelshop</div>
+            <div>Helpcenter</div>
+            <div>Digitale krant</div>
+        </div>
+    </div>
+    <header>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9IiNiMDAwMDAiLz48dGV4dCB4PSI1IiB5PSIyMCIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1Ij5EUzwvdGV4dD48L3N2Zz4=" alt="DS Logo">
+        <span>De Standaard</span>
+    </header>
+    <nav>
+        <div>Meest recent</div>
+        <div>DS Avond</div>
+        <div>Opinie</div>
+        <div>De helpdesk</div>
+    </nav>
+    <main>
+        <h2 class="section-title">Meest recent</h2>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>Zonnebril én laarzen bij de hand? Deze 6 wandelingen in eigen land beloven een instant vakantiegevoel</h3>
+                <time>08:50</time>
+            </div>
+            <img src="https://source.unsplash.com/200x120/?nature,walk" alt="Wandeling">
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>Premier De Wever per trein aangekomen in Kiev</h3>
+                <time>08:07</time>
+            </div>
+            <img src="https://source.unsplash.com/200x120/?train,politics" alt="Kiev">
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>Zaterdag overleggen Iran en VS in Oman, maar Teheran ontkent “direct” gesprek</h3>
+                <time>07:20</time>
+            </div>
+            <img src="https://source.unsplash.com/200x120/?iran,usa,flags" alt="Iran VS">
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>China keurt “chantage” van Trump af en zegt “tot het einde” te vechten tegen tarieven</h3>
+                <time>07:03</time>
+            </div>
+            <img src="https://source.unsplash.com/200x120/?trump,china" alt="Trump China">
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>Lectorr, cartoon van de dag</h3>
+                <time>06:42</time>
+            </div>
+            <img src="https://source.unsplash.com/200x120/?cartoon,illustration" alt="Cartoon">
+        </div>
+
+    </main>
+</body>
+</html>
