@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Mock Instagram Feed - Full Layout</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      border-right: 1px solid #dbdbdb;
+      height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
+      position: fixed;
+    }
+    .sidebar h2 {
+      font-family: 'Billabong', cursive;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+    }
+    .main-content {
+      margin-left: 250px;
+      margin-right: 300px;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .post {
+      background-color: #fff;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #dbdbdb;
+      margin-bottom: 1.5rem;
+      border-radius: 3px;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    .post-header img {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    .post-image {
+      width: 100%;
+      height: auto;
+    }
+    .post-actions {
+      display: flex;
+      justify-content: start;
+      gap: 1rem;
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+    .post-caption {
+      padding: 0 10px 10px 10px;
+    }
+    .username {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .hashtag {
+      color: #00376b;
+    }
+    .right-sidebar {
+      width: 280px;
+      padding: 2rem 1rem;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-left: 1px solid #dbdbdb;
+    }
+    .right-sidebar h3 {
+      margin-top: 0;
+    }
+    .suggestion {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .suggestion img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .suggestion-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .suggestion-info span {
+      font-size: 0.9rem;
+    }
+    .suggestion-info small {
+      color: gray;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<header style="position:fixed;top:0;left:250px;right:280px;height:60px;background:#fff;border-bottom:1px solid #dbdbdb;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;z-index:1000;">
+<div style="font-family:'Billabong', cursive; font-size:2rem;">Instagram</div>
+<input placeholder="Zoeken" style="padding:6px 12px;border:1px solid #dbdbdb;border-radius:3px;flex-grow:1;margin:0 1rem;max-width:200px;" type="text"/>
+<div style="font-size:1.2rem;display:flex;gap:1rem;">
+<i class="fa-solid fa-house"></i> <i class="fa-regular fa-paper-plane"></i> <i class="fa-regular fa-compass"></i> <i class="fa-regular fa-heart"></i> </div>
+</header>
+<div class="sidebar">
+<img alt="Instagram Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 50px; height: auto; display: block; margin-bottom: 2rem;"/>
+<nav><a href="#"><i class="fa-solid fa-house" style="width: 20px;"></i> Startpagina</a><a href="#"><i class="fa-solid fa-magnifying-glass" style="width: 20px;"></i> Zoeken</a><a href="#"><i class="fa-regular fa-compass" style="width: 20px;"></i> Verkennen</a><a href="#"><i class="fa-regular fa-comment" style="width: 20px;"></i> Berichten</a><a href="#"><i class="fa-regular fa-heart" style="width: 20px;"></i> Meldingen</a><a href="#"><i class="fa-regular fa-square-plus" style="width: 20px;"></i> Maken</a><a href="#"><i class="fa-regular fa-user" style="width: 20px;"></i> Profiel</a></nav>
+</div>
+<div class="main-content" style="padding-top:80px;">
+<div class="container">
+<!-- stories carrousel -->
+<div style="display: flex; justify-content: center; gap: 20px; padding: 20px 0;">
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/mvdp.jpg" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">mathieuv...</div>
+</div>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/main/img-thumbnails/VRT.jpg" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">vrtnws</div>
+</div>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/pommelien.png" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">pommelie...</div>
+</div>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/main/img-thumbnails/memes.jpg" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">memes</div>
+</div>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/main/img-thumbnails/Sporza.png" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">sporza.be</div>
+</div>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/viktor.png" style="width: 66px; height: 66px; border-radius: 50%; border: 2px solid #d6249f;"/>
+<div style="font-size: 12px; margin-top: 6px;">viktorv...</div>
+</div>
+</div>
+<!-- Post 1 -->
+<div class="post">
+<div class="post-header">
+<img alt="User Pic" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/thumbnailbrusselfood.jpg"/>
+<strong>brussels.food</strong>
+</div>
+<img alt="Post Image 5" class="post-image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/brusselfood.png" style="width: 100%; height: 440px; object-fit: cover; object-position: center center"/>
+<div class="post-actions"><i class="fa-regular fa-heart"></i> <i class="fa-regular fa-comment"></i> <i class="fa-regular fa-paper-plane"></i></div>
+<div class="post-caption">
+<span class="username">brussels.foods</span>
+          Brunch, our favorite time of the day!🥞 Yesterday we tried the new food spot Zou Zou Brussels and let us tell you, it was delicious! 😍 If you’re ever in the area, don’t hesitate to try them out! 👌🏻 <br/>
+<span class="hashtag">#foodielover #brunch</span>
+</div>
+<!-- Post 2 -->
+</div><div class="post">
+<div class="post-header">
+<img alt="User Pic" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/destandaard.png"/>
+<strong>destandaard</strong>
+</div>
+<img alt="Post Image 2" class="post-image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/NuancePost.png" style="width: 100%; height: 440px; object-fit: cover; object-position: center top"/>
+<div class="post-actions"><i class="fa-regular fa-heart"></i> <i class="fa-regular fa-comment"></i> <i class="fa-regular fa-paper-plane"></i></div>
+<div class="post-caption">
+<span class="username">destandaard</span>
+          Migratie is geen zwart-witverhaal. We moeten kwetsbare mensen helpen, maar tegelijk duidelijke regels hanteren en inzetten op integratie. Alleen zo vermijden we polarisatie én behouden we draagvlak in de samenleving.<br/>
+<span class="hashtag">#migratie #evenwicht #beleid</span>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="post">
+<div class="post-header">
+<img alt="User Pic" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/rob.jpg"/>
+<strong>averagerob</strong>
+</div>
+<img alt="Post Image 3" class="post-image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/marathonrob.png" style="width: 100%; height: 440px; object-fit: cover; object-position: center top"/>
+<div class="post-actions"><i class="fa-regular fa-heart"></i> <i class="fa-regular fa-comment"></i> <i class="fa-regular fa-paper-plane"></i></div>
+<div class="post-caption">
+<span class="username">averagerob</span>
+          By far the toughest week of my life. Everything that could go wrong, did go wrong. And somehow… that made it even better. We made it! Can’t wait to share the documentary we shot.<br/>
+<span class="hashtag">#sahara #marathondessables</span>
+</div>
+</div>
+<!-- Post 4 -->
+<div class="post">
+<div class="post-header">
+<img alt="User Pic" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/thumbnailbeyonce.png"/>
+<strong>beyonce</strong>
+</div>
+<img alt="Post Image 4" class="post-image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/beyonce.png" style="width: 100%; height: 440px; object-fit: cover; object-position: center top"/>
+<div class="post-actions"><i class="fa-regular fa-heart"></i> <i class="fa-regular fa-comment"></i> <i class="fa-regular fa-paper-plane"></i></div>
+<div class="post-caption">
+<span class="username">beyonce</span>
+          I try not to cry too early in the day BUT……. My sister 4ever! 🤍💫 <br/>
+<span class="hashtag">#truelove #bffs</span>
+</div>
+</div>
+<!-- Post 5 -->
+<div class="post">
+<div class="post-header">
+<img alt="User Pic" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/main/img-thumbnails/VRT.jpg"/>
+<strong>vrtnws</strong>
+</div>
+<img alt="Post Image 1 - Trees Landscape" class="post-image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/sportpaleis.png" style="width: 100%; height: 440px; object-fit: cover; object-position: center bottom"/>
+<div class="post-actions"><i class="fa-regular fa-heart"></i> <i class="fa-regular fa-comment"></i> <i class="fa-regular fa-paper-plane"></i></div>
+<div class="post-caption">
+<span class="username">vrtnws</span>
+          Waar zijn die handjes... AFAS Dome? Vanaf 1 september is het Sportpaleis verleden tijd. De concertzaal in Antwerpen krijgt een nieuwe naam, voor het eerst sinds 1933. Het Nederlandse softwarebedrijf AFAS was al bekend als nieuwe sponsor van de concertzaal en moest sowieso in de nieuwe naam komen.<br/>
+<span class="hashtag">#sportpaleis #afasdome #antwerpen</span>
+</div>
+</div></div>
+</div>
+<div class="right-sidebar">
+<div class="user-profile" style="display: flex; align-items: center; margin-bottom: 2rem;"><img alt="User Profiel" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/anoniem.png" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;"/><div><span>KU Leuven account</span><br/><small>User21</small></div></div><h3>Suggesties voor jou</h3>
+<div class="suggestion">
+<img alt="Suggestion 1" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/kat.png"/>
+<div class="suggestion-info">
+<span>katkerhofs</span>
+<small>Bekend persoon</small>
+</div>
+</div>
+<div class="suggestion">
+<img alt="Suggestion 2" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/demorgen.png"/>
+<div class="suggestion-info">
+<span>demorgen</span>
+<small>Nieuws- en mediawebsite</small>
+</div>
+</div>
+<div class="suggestion">
+<img alt="karl vannieuwkerke" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Karl.jpg"/>
+<div class="suggestion-info">
+<span>karlvannieuwkerke</span>
+<small>Sportjournalist</small>
+</div>
+</div>
+</div>
+</body>
+</html>
