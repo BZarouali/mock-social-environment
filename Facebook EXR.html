@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Facebook Timeline Mock</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      padding: 1rem;
+      background: #fff;
+      height: 100vh;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .sidebar h3 {
+      font-size: 14px;
+      margin-top: 2rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .main {
+      flex: 1;
+      padding: 1rem;
+    }
+    .status-bar {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .status-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+    }
+    .stories {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    .story {
+      width: 80px;
+      height: 130px;
+      background: #ccc;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      text-align: center;
+    }
+    .post {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    .post img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .post .actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .rightbar {
+      width: 240px;
+      padding: 1rem;
+      font-size: 14px;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .contact img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+    .contact span {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+<header style="position: fixed; top: 0; left: 0; right: 0; height: 56px; background-color: #ffffff; border-bottom: 1px solid #ddd; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; z-index: 1000;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<i class="fa-brands fa-facebook" style="color: #1877f2; font-size: 28px;"></i>
+<input placeholder="Zoeken op Facebook" style="padding: 6px 12px; border: 1px solid #ccc; border-radius: 20px; background-color: #f0f2f5;" type="text"/>
+</div>
+<div style="display: flex; align-items: center; gap: 60px; font-size: 18px; color: #606770; margin-left: -102px;">
+<i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-tv"></i>
+<i class="fa-solid fa-store"></i>
+<i class="fa-solid fa-users"></i>
+<i class="fa-solid fa-gamepad"></i>
+</div>
+<div style="display: flex; align-items: center; gap: 32px; font-size: 18px; color: #606770;">
+<i class="fa-solid fa-plus-circle"></i>
+<i class="fa-solid fa-comment-dots"></i>
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-circle-user"></i>
+</div>
+</header>
+<div class="sidebar" style=" margin-top: 70px;">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;"><img src="https://www.w3schools.com/howto/img_avatar.png" style="width: 32px; height: 32px; border-radius: 50%;"/><span>KU Leuven account</span></div>
+<ul><li><i class="fa-brands fa-meta" style="background: linear-gradient(to right, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i> Meta AI</li><li><i class="fa-solid fa-user-group" style="color: #1d8cf8;"></i> Vrienden</li><li><i class="fa-solid fa-clock-rotate-left" style="color: #4b6cb7;"></i> Herinneringen</li><li><i class="fa-solid fa-bookmark" style="color: #cb2d3e;"></i> Opgeslagen</li><li><i class="fa-solid fa-users" style="color: #1877f2;"></i> Groepen</li><li><i class="fa-solid fa-play" style="color: #1c92d2;"></i> Video</li><li><i class="fa-solid fa-store" style="color: #42e695;"></i> Marketplace</li><li><i class="fa-solid fa-chevron-down" style="color: #999;"></i> Meer weergeven</li></ul>
+<h3>Jouw snelkoppelingen</h3>
+<ul><li style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Lingua.png" style="width: 28px; height: 28px; border-radius: 4px;"/><span>Lingua - Language Learning</span></li><li style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/KUL.png" style="width: 28px; height: 28px; border-radius: 4px;"/><span>KU Leuven CW</span></li><li style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Rock.png" style="width: 28px; height: 28px; border-radius: 4px;"/><span>Rock Werchter</span></li><li style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/farmville2.jpg" style="width: 28px; height: 28px; border-radius: 4px;"/><span>FarmVille 2</span></li></ul>
+</div>
+<div class="main" style="margin-top: 70px; max-width: 600px; margin-left: auto; margin-right: auto;; margin-top: 70px; max-width: 600px; margin-left: auto; margin-right: auto;">
+<div class="status-bar">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+<img src="https://www.w3schools.com/howto/img_avatar.png" style="width: 32px; height: 32px; border-radius: 50%;"/>
+<input placeholder="Wat ben je aan het doen?" style="flex: 1; padding: 10px 16px; font-size: 0.95rem; border-radius: 20px; border: 1px solid #ccc; background: #f0f2f5;" type="text"/>
+</div><hr style="margin: 6px 0; border: none; border-top: 0.3px solid #ccc;"/>
+<div style="display: flex; justify-content: space-around; text-align: center; font-size: 14px; color: #606770;">
+<div style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+<i class="fa-solid fa-video" style="color: #f3425f;"></i> <span>Live video</span>
+</div>
+<div style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+<i class="fa-solid fa-image" style="color: #45bd62;"></i> <span>Foto/video</span>
+</div>
+<div style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+<i class="fa-regular fa-face-smile" style="color: #f7b928;"></i> <span>Gevoel/activiteit</span>
+</div>
+</div>
+</div>
+<div class="stories" style="display: flex; gap: 10px; overflow-x: auto; margin: 0 auto 1rem auto; width: fit-content; max-width: 100%;">
+<div class="story" style="
+        width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0;
+        background-color: #ccc;
+        position: relative; display: flex;
+        flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 6px;
+        text-align: center; font-size: 12px; overflow: hidden; color: black;
+    ">
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: white; border-radius: 50%; padding: 6px;">
+<i class="fa-solid fa-plus" style="color: #1877f2; font-size: 16px;"></i>
+</div>
+<div style="background: white; width: 100%; padding: 4px 0;">Verhaal maken</div>
+</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/nass%20daily.png'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8)">Nas Daily</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Gazet%20Van%20Antwerpen.png'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8)">Gazet Van Antwerpen</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Matthias.png'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8)">Matthias</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Vdbempt.png'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8)">Sporza</div>
+<div class="story" style="width: 80px; height: 130px; border-radius: 10px; flex-shrink: 0; background-image: url('https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Foudil.png'); background-size: cover; background-position: center; position: relative; color: white; font-size: 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; text-shadow: 0px 0px 4px rgba(0,0,0,0.8)">Foudil</div>
+</div>
+<div class="post">
+<div style="display: flex; align-items: center; gap: 8px; line-height: 1; margin-bottom: 0;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Emirates.png" style="width: 28px; height: 28px; border-radius: 50%;"/><strong style="position: relative; top: 4px;">Emirates</strong></div>
+<p>🛫 Emirates breidt haar netwerk uit met 14 nieuwe bestemmingen. 🌍 Daarmee is het officieel de grootste luchtvaartmaatschappij ter wereld. ✈️ Reizigers kunnen nu wereldwijd nog vlotter hun bestemming bereiken.</p>
+<img alt="Mock Post Image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/plane%20emirates.jpg"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+      </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+      </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+      </span>
+</div>
+</div>
+<div class="post">
+<div style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Nieuwsblad.jpg" style="width: 28px; height: 28px; border-radius: 50%;"/><strong style="position: relative; top: 4px;">Het Nieuwsblad</strong></div>
+<p>"Steeds dezelfde mensen houden deze samenleving draaiende. Intussen stapelen uitkeringen, inactiviteit en misbruik zich op. Het geld moet niet komen van wie onderneemt of spaart, maar van wie jarenlang ontvangt zonder iets terug te doen."</p>
+<img alt="Sporza Post Image" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/Rechts%20NBLAD.png" style="width: 100%; height: 340px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+        </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+        </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+        </span>
+</div>
+</div>
+<div class="post">
+<div style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Play%204.png" style="width: 28px; height: 28px; border-radius: 50%;"/><strong style="position: relative; top: 4px;">Play 4</strong></div>
+<p>Het kookpunt is bijna bereikt 🥵🔥. Het doek valt weldra in <span style="color: #1877f2;">#CelebrityMasterChefVl</span>. 🍽️ Mis de ontknoping niet. Kijk het nu in onze GoPlay app! 📺</p>
+<img alt="Post Image 3" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/Masterchef1.png"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+    </span>
+</div>
+</div>
+<div class="post">
+<div style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/VRT.jpg" style="width: 28px; height: 28px; border-radius: 50%;"/><strong style="position: relative; top: 4px;">VRTNWS</strong></div>
+<p>Zijn musea zoals het Frietmuseum in Brussel, dat zonet is geopend, wel échte musea? De vraag werpt zich op nu de chocolademusea en frietbelevingen alomtegenwoordig lijken te zijn.</p>
+<img alt="Post Image 4" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/main/img%20-%20feed/Frietmuseum.png" style="width: 100%; height: 340px; object-fit: cover; object-position: bottom; border-radius: 8px; margin-top: 10px;"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+    </span>
+</div>
+</div>
+<div class="post">
+<div style="display: flex; align-items: center; gap: 10px;"><img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/NMBS.png" style="width: 28px; height: 28px; border-radius: 50%;"/><strong style="position: relative; top: 4px;">NMBS</strong></div>
+<p>Goed nieuws voor wie de trein neemt in Hasselt! 🚆 Vanaf maandag 7 april zal je opnieuw gebruik kunnen maken van alle perrons in het station.
+Sinds het begin van de werken zijn er heel wat dingen veranderd:
+ 🔹 De perrons werden verhoogd, zodat je makkelijker kan op- en afstappen.
+ 🔹 Er zijn liften, roltrappen en geleidelijnen voor een vlotte en veilige doorgang.
+ 🔹 Het station telt nu 10 in plaats van 9 sporen.</p>
+<img alt="Post Image 5" src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img%20-%20feed/Hasselt%20station.jpg" style="width: 100%; height: 340px; object-fit: cover; object-position: center; border-radius: 8px; margin-top: 10px;"/>
+<div class="actions">
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-thumbs-up"></i> Like
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-regular fa-comment"></i> Comment
+    </span>
+<span style="display: flex; align-items: center; gap: 6px; color: #65676b; font-weight: 600; cursor: pointer;">
+<i class="fa-solid fa-share"></i> Share
+    </span>
+</div>
+</div>
+</div>
+<div class="rightbar" style=" margin-top: 70px;">
+<strong style="display: block; margin-bottom: 16px;">Contacten</strong>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/1.jpg"/><span>Sofie Janssens</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/2.jpg"/><span>Mei Lin Tan</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/3.jpg"/><span>Annelies Maes</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/women/4.jpg"/><span>Nora Houdaina</span></div>
+<div class="contact" style=" margin-bottom: 20px;"><img alt="" src="https://randomuser.me/api/portraits/men/1.jpg"/><span>Thomas Bekaert</span></div>
+<div style="margin-top: 40px;">
+<strong style="display: block; margin-bottom: 16px;">Suggesties voor jou</strong>
+<div style="display: flex; align-items: center; margin-bottom: 16px; gap: 10px;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Natalia.png" style="width: 36px; height: 36px; border-radius: 50%;"/>
+<div>
+<div style="font-size: 14px; font-weight: 600;">Natalia</div>
+<div style="font-size: 12px; color: gray;">Bekend persoon</div>
+</div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 16px; gap: 10px;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/demorgen.png" style="width: 36px; height: 36px; border-radius: 8px; object-fit: cover;"/>
+<div>
+<div style="font-size: 14px; font-weight: 600;">De Morgen</div>
+<div style="font-size: 12px; color: gray;">Nieuws- en mediawebsite</div>
+</div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 16px; gap: 10px;">
+<img src="https://raw.githubusercontent.com/BZarouali/mock-social-environment/refs/heads/main/img-thumbnails/Ruben%20VG.png" style="width: 36px; height: 36px; border-radius: 50%;"/>
+<div>
+<div style="font-size: 14px; font-weight: 600;">Ruben Van Gucht</div>
+<div style="font-size: 12px; color: gray;">Sportjournalist</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
